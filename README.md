@@ -44,7 +44,10 @@ Test work
 {\"geoname_id\": \"1512090\", \"name\": \"Ail\", \"asciiname\": \"Ail\", \"alternatenames\": \"Ail,\\u0410\\u0438\\u043b\", \"latitude\": \"53.33333\", \"longitude\": \"87.21667\", \"feature_class\": \"P\", \"feature_code\": \"PPL\", \"country_code\": \"RU\", \"cc2\": \"\", \"admin1_code\": \"29\", \"admin2_code\": \"\", \"admin3_code\": \"\", \"admin4_code\": \"\", \"population\": \"0\", \"elevation\": \"\", \"dem\": \"253\", \"timezone\": \"Asia/Novokuznetsk\", \"modification_date\": \"2012-01-17\"}, {\"Voronovo\": \"located to the north\", \"timezone\": \"different, the difference is: 4 hours\"}]"
 Полученный ответ может быть обработан с помощью json.loads().
 <h5>Пример запроса в браузере с неполным вводом названия города_1: http://127.0.0.1:8000/cities/Воро/Аил</h5>
-<em>"[\"CITY WITH NAME_1 NOT FOUND TRY WITH\", [\"Voronovo\", \"Vorob'yevo\", \"Vorotkovo\", \"Voropayevka\", \"Vorodunovo\", \"Vtoroy Pol'noy Voronezh\", \"Vtoraya Vorob'yevka\", \"Vorovskiy\", \"Voroz'ma\", \"Vorozhtsovo\", \"Vorozhino\", \"Vorozhgora\", \"Vorovskoy\", \"Vorovskolesskaya\", \"Vorovo\", \"Vorovaya\", \"Vorotyshino\", \"Vorotyntsevo\", \"Vorotynsk\", \"Vorotynovo\", \"Vorotynka\", \"Vorotynets\", \"Vorottsy\", \"Vorotovo\", \"Vorotovka\", \"Vorotnino\", \"Vorotishino\", \"Vorotishna\", \"Vorotimovo\", \"Vorotilovo\", \"Vorotilov\", \"Vorotilikha\", ............, \"Verkhnyaya Voronka\", \"Vorobetskaya\", \"Vorokhoby\"]]"
+<em>"[\"CITY WITH NAME_1 NOT FOUND TRY WITH\", [\"Voronovo\", \"Vorob'yevo\", \"Vorotkovo\", \"Voropayevka\", \"Vorodunovo\", \"Vtoroy Pol'noy Voronezh\", 
+\"Vtoraya Vorob'yevka\", \"Vorovskiy\", \"Voroz'ma\", \"Vorozhtsovo\", \"Vorozhino\", \"Vorozhgora\", \"Vorovskoy\", \"Vorovskolesskaya\", \"Vorovo\", \"Vorovaya\",
+\"Vorotyshino\", \"Vorotyntsevo\", \"Vorotynsk\", \"Vorotynovo\", \"Vorotynka\", \"Vorotynets\", \"Vorottsy\", \"Vorotovo\", \"Vorotovka\", \"Vorotnino\", \"Vorotishino\",
+\"Vorotishna\", \"Vorotimovo\", \"Vorotilovo\", \"Vorotilov\", \"Vorotilikha\", ............, \"Verkhnyaya Voronka\", \"Vorobetskaya\", \"Vorokhoby\"]]"
 </em>
 При неполном вводе города_2 результат будет аналогичный. В случае неполного ввода обоих городов, метод выведет два списка с возможными наименованиями городов.
 </pre>
