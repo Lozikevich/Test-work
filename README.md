@@ -48,7 +48,7 @@ Test work
 \"\", \"admin4_code\": \"\", \"population\": \"0\", \"elevation\": \"\", \"dem\": \"253\", \"timezone\": \"Asia/Novokuznetsk\", \"modification_date\": \"2012-01-17\"},
 {\"Voronovo\": \"located to the north\", \"timezone\": \"different, the difference is: 4 hours\"}]"</em>
 Полученный ответ может быть обработан с помощью json.loads().
-<h5>Пример запроса в браузере с неполным вводом названия города_1: http://127.0.0.1:8000/cities/Воро/Аил</h5>
+<h4>Пример запроса в браузере с неполным вводом названия города_1: http://127.0.0.1:8000/cities/Воро/Аил</h4>
 <em>"[\"CITY WITH NAME_1 NOT FOUND TRY WITH\", [\"Voronovo\", \"Vorob'yevo\", \"Vorotkovo\", \"Voropayevka\", \"Vorodunovo\", \"Vtoroy Pol'noy Voronezh\", 
 \"Vtoraya Vorob'yevka\", \"Vorovskiy\", \"Voroz'ma\", \"Vorozhtsovo\", \"Vorozhino\", \"Vorozhgora\", \"Vorovskoy\", \"Vorovskolesskaya\", \"Vorovo\", \"Vorovaya\",
 \"Vorotyshino\", \"Vorotyntsevo\", \"Vorotynsk\", \"Vorotynovo\", \"Vorotynka\", \"Vorotynets\", \"Vorottsy\", \"Vorotovo\", \"Vorotovka\", \"Vorotnino\", \"Vorotishino\",
