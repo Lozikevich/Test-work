@@ -109,7 +109,8 @@ async def name_list(aname) -> list:
     name_list: list = []
     for geoname in filter(comparison, await get_only_cities()):
         # name_list.append(pytils.translit.detranslify(geoname.asciiname))
-        name_list.append(geoname.asciiname)
+        if geoname.asciiname not in name_list:
+            name_list.append(geoname.asciiname)
     if len(name_list) > 0:
         return name_list
     else:

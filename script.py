@@ -1,5 +1,5 @@
 import json
-
+import config
 from pytils import translit
 from aiohttp import web
 import Functions
@@ -40,7 +40,7 @@ async def get_two_cities(request: web.Request) -> web.Response:
                                  if name_list else web.HTTPNotFound()))
     elif geoname_2:
         name_list = await Functions.name_list(translit.translify(request.match_info['aname_1']))
-        return web.json_response(json.dumps(['CITY WITH NAME_2 NOT FOUND TRY WITH', name_list])
+        return web.json_response(json.dumps(['CITY WITH NAME_1 NOT FOUND TRY WITH', name_list])
                                  if name_list else web.HTTPNotFound())
     else:
         return web.Response(text='CITIES NOT FOUND')
@@ -48,10 +48,6 @@ async def get_two_cities(request: web.Request) -> web.Response:
 
 
 if __name__ == '__main__':
-    settings = {
-        'host': '127.0.0.1',
-        'port': 8000,
-    }
     app = web.Application()
     app.add_routes(routes)
-    web.run_app(app, host=settings['host'], port=settings['port'])
+    web.run_app(app, host=config.for_server['host'], port=config.for_server['port'])
