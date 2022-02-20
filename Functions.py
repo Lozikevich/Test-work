@@ -1,6 +1,4 @@
-import codecs
 from typing import Iterable
-import pytils
 from Geoname import *
 import io
 from datetime import datetime
@@ -101,14 +99,13 @@ async def latitudde_compare(geoname_1: Geoname, geoname_2: Geoname) -> dict:
 async def name_list(aname) -> list:
 
     def comparison(geoname):
-        if str(aname) in str(geoname.asciiname):
+        if str(translit.translify(aname)) in str(geoname.asciiname):
             return True
         else:
             return False
 
     name_list: list = []
     for geoname in filter(comparison, await get_only_cities()):
-        # name_list.append(pytils.translit.detranslify(geoname.asciiname))
         if geoname.asciiname not in name_list:
             name_list.append(geoname.asciiname)
     if len(name_list) > 0:
