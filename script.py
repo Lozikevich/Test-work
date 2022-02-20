@@ -42,6 +42,12 @@ async def get_two_cities(request: web.Request) -> web.Response:
         name_list = await Functions.name_list(translit.translify(request.match_info['aname_1']))
         return web.json_response(json.dumps(['CITY WITH NAME_1 NOT FOUND TRY WITH', name_list])
                                  if name_list else web.HTTPNotFound())
+    elif not geoname_1 and not geoname_2:
+        name_list_1 = await Functions.name_list(translit.translify(request.match_info['aname_1']))
+        name_list_2 = await Functions.name_list(translit.translify(request.match_info['aname_2']))
+        return web.json_response(json.dumps(['CITY WITH NAME_1 NOT FOUND TRY WITH', name_list_1,
+                                             'CITY WITH NAME_2 NOT FOUND TRY WITH', name_list_2])
+                                 if name_list_1 and name_list_2 else web.HTTPNotFound())
     else:
         return web.Response(text='CITIES NOT FOUND')
     # http://127.0.0.1:8000/cities/Вороново/Тресково
