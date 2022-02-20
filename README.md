@@ -39,7 +39,8 @@ Test work
 - при неполном введении названия города, метод выводит список из всех возможных вариантов для заданного отрывка названия города.
 <h5>Пример запроса в браузере: http://127.0.0.1:8000/cities/Вороново/Аил</h5>
 <h5>Пример ответа, полученного в браузере:</h5>
-<em>"[{\"geoname_id\": \"471938\", \"name\": \"Voronovo\", \"asciiname\": \"Voronovo\", \"alternatenames\": \"Voronovo,\\u0412\\u043e\\u0440\\u043e\\u043d\\u043e\\u0432\\u043e\", \"latitude\": \"56.36525\", \"longitude\": \"37.68534\", \"feature_class\": \"P\", \"feature_code\":
+<em>"[{\"geoname_id\": \"471938\", \"name\": \"Voronovo\", \"asciiname\": \"Voronovo\", \"alternatenames\":
+\"Voronovo,\\u0412\\u043e\\u0440\\u043e\\u043d\\u043e\\u0432\\u043e\", \"latitude\": \"56.36525\", \"longitude\": \"37.68534\", \"feature_class\": \"P\", \"feature_code\":
 \"PPL\", \"country_code\": \"RU\", \"cc2\": \"\", \"admin1_code\": \"47\", \"admin2_code\": \"\", \"admin3_code\": \"\", \"admin4_code\": \"\", \"population\": \"12\",
 \"elevation\": \"\", \"dem\": \"206\", \"timezone\": \"Europe/Moscow\", \"modification_date\": \"2015-02-01\"},
 {\"geoname_id\": \"1512090\", \"name\": \"Ail\", \"asciiname\": \"Ail\", \"alternatenames\": \"Ail,\\u0410\\u0438\\u043b\", \"latitude\": \"53.33333\", \"longitude\":
